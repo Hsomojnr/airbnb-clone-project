@@ -74,3 +74,79 @@ Coordinates the team, sets milestones, and ensures the project stays on schedule
 
 ### 7. QA Engineer
 Responsible for testing the application to ensure it works as expected. Writes test cases, performs manual and automated testing, and reports bugs.
+
+## Database Design
+
+The database will store all the essential data for users, listings, bookings, reviews, and payments. Below are the key entities and their relationships.
+
+### 1. Users
+
+Represents users of the platform (guests and hosts).
+
+**Fields:**
+- `id` (Primary Key)
+- `name`
+- `email`
+- `password_hash`
+- `user_type` (guest or host)
+
+### 2. Properties
+
+Represents listings created by hosts.
+
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key to Users)
+- `title`
+- `description`
+- `location`
+- `price_per_night`
+
+**Relationship:**
+- A **user** (host) can have **many properties**
+
+### 3. Bookings
+
+Represents reservations made by guests.
+
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `start_date`
+- `end_date`
+- `total_price`
+
+**Relationship:**
+- A **user** (guest) can have **many bookings**
+- A **property** can have **many bookings**
+
+### 4. Reviews
+
+Represents feedback left by guests for a property.
+
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `rating` (1–5)
+- `comment`
+
+**Relationship:**
+- A **user** can leave **many reviews**
+- A **property** can have **many reviews**
+
+### 5. Payments
+
+Represents payment records for completed bookings.
+
+**Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key to Bookings)
+- `amount`
+- `payment_date`
+- `payment_status` (paid, failed, refunded)
+
+**Relationship:**
+- Each **booking** has **one payment**
+
