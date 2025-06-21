@@ -182,3 +182,44 @@ Guests can search for listings by location, price, availability, and other filte
 
 An administrative interface to monitor users, listings, and bookings. Useful for moderation, analytics, and managing platform integrity.
 
+## API Security
+
+Securing the backend APIs is a critical part of this project to protect user data, ensure data integrity, and prevent malicious activities. Below are the key security measures we plan to implement:
+
+### 1. Authentication
+
+Only registered users will be able to access certain parts of the application. We'll use secure authentication methods (e.g., token-based authentication with JWT) to verify user identities and manage sessions.
+
+🔐 **Why it matters:** Ensures that only verified users can log in, interact with data, and make bookings or payments.
+
+### 2. Authorization
+
+After authentication, users will only be allowed to perform actions they are permitted to (e.g., hosts can only edit their own listings). Role-based access control (RBAC) will be used to enforce this.
+
+🔐 **Why it matters:** Prevents unauthorized access to resources, such as editing someone else’s property or viewing another user’s bookings.
+
+### 3. Input Validation & Sanitization
+
+All input from users will be validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS).
+
+🔐 **Why it matters:** Protects the system from malicious user input that could corrupt or leak data.
+
+### 4. Rate Limiting
+
+Limits the number of API requests a user can make within a certain time frame. This helps to prevent brute force attacks and abuse of endpoints.
+
+🔐 **Why it matters:** Ensures fair usage and protects the server from being overwhelmed by too many requests.
+
+### 5. Secure Data Transmission
+
+All data will be transmitted over HTTPS to prevent data from being intercepted in transit.
+
+🔐 **Why it matters:** Protects sensitive information like login credentials and payment details from being stolen during transmission.
+
+### 6. Logging & Monitoring
+
+All critical actions and errors will be logged and monitored to detect suspicious behavior or breaches.
+
+🔐 **Why it matters:** Helps in identifying and responding to security incidents promptly.
+
+
