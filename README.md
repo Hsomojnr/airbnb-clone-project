@@ -13,10 +13,41 @@ This project is a clone of the AirBnB web application. The goal is to understand
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask or Django)
-- **Database**: MySQL or PostgreSQL
+- **Backend**: Python (Django)
+- **Database**:  PostgreSQL
 - **Version Control**: Git and GitHub
 - **Deployment**: Heroku, Render, or AWS
+
+### 1. Django
+A high-level Python web framework used to build the backend and RESTful APIs. It handles routing, business logic, authentication, and server-side rendering.
+
+### 2. PostgreSQL
+An open-source relational database used to store structured data such as users, bookings, listings, and reviews. Chosen for its reliability, scalability, and support for advanced querying.
+
+### 3. HTML/CSS
+The fundamental technologies for building and styling the structure of web pages. HTML provides the content structure, while CSS handles layout and visual design.
+
+### 4. JavaScript
+Adds interactivity to the frontend, enabling dynamic content updates, client-side validations, and improved user experience.
+
+### 5. GraphQL
+A query language for APIs that allows clients to request exactly the data they need. It provides more flexibility than REST and can optimize data fetching.
+
+### 6. Git
+A version control system to track changes in source code and collaborate with team members effectively.
+
+### 7. GitHub
+A cloud-based platform to host the Git repository, manage code reviews, track issues, and collaborate in a team setting.
+
+### 8. Docker
+Used to containerize the application, making it easier to develop, test, and deploy in consistent environments.
+
+### 9. CI/CD Tools (GitHub Actions, Jenkins)
+Automate testing, building, and deployment processes to ensure fast and reliable software delivery.
+
+### 10. Deployment Platforms (Heroku, AWS, Render)
+Used to host the live version of the application for end-users. Handles scalability, performance, and availability.
+
 
 
 ## Team Roles
